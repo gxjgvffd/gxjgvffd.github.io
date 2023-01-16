@@ -1,187 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>古个古-私人艺术定制</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="btn">
-        <p>&nbsp;👇Welcome To My Wonderland👇</p>
-    </div>
-    <div class="top">
-<!--         <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的兴趣</a>
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的过去</a>
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的梦想</a> -->
-        <a href="https://space.bilibili.com/1074901364?spm_id_from=333.1007.0.0" target="_blank" style="float:right">在bilibili发现我</a>
-<!--     </div>
-    <div class="content">
-    
-        <h1 class="avr">Give AR/VR Eyes and Brain</h1>
-    </div>
 
+    <head>
 
-    <div class="yinyue">
-        <img class="music" src="./33.png" alt="">
-        <audio autoplay="autoplay" id="audio" loop="loop">
-            <source src="./music1.mp3" type="audio/MP3">
+        <meta charset="utf-8"/>
 
-        </audio> -->
+        <title>混合布局</title>
 
-    </div>
-    <div class="row">
-        <div class="centercolumn">
-            <div class="card">
+    </head>
 
-                <h2 id="biaoti">主题预览</h2><br />
-                <hr />
-                <h4 id="qita">截至 2023 年 1 月 16日</h4>
+    <style>
 
-                <p style="text-indent:2em"> </p>
-		    <style>
-			div{
-			width: 200px;
-			height: 150px;
-			background- image: ur1(" QQ图片20230116154720.png" )
-			}
-			</style>
-			</head>
-			<body>
-			<div></div>
+    body{
 
-                <p style="text-indent:2em"> </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-                <p style="text-indent:2em">
-                    
-                </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-            </div>
-            <br /><br />
-            <div class="card">
-                <h2 id="biaoti">我的作品</h2><br />
-                <hr />
-                <h4 id="qita">2020 年 1 月 30日</h4>
-                <p style="text-indent:2em">
-                     
+        margin:0;
 
-                </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-                <p style="text-indent:2em">
-                    
-                </p>
-                <p style="text-indent:2em">
-                     
-                </p>
-                <p style="text-indent:2em">
-                    
-                </p>
-            </div>
+    }
 
-        </div>
+    .box{
 
+        width:960px;
 
-    </div>
-   
-    
-    <br /><br />
-    <button class="bt" onclick="window.open('https://blog.csdn.net/weixin_51263734')">MY CSDN BLOG</button>
+        margin:0 auto;
 
-    <script>
-    let mucics = document.getElementById('audio')
-    document.body.addEventListener('mousemove', function() {
-        setTimeout(() => {
-            mucics.play();
-        }, 2000);
-    }, false);
-    </script>
-    
-    <div class="footer">
-        <br />
-        <p>加入我的创意工坊 为生活增添乐趣</p><br />
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank"><img class="someimg" src="./hou.png" alt="" width="30"></a>
-        <abbr title="QQ账号：2633386281"><img class="someimg" src="./qq.png" alt="" width="30"></abbr>
-        <abbr title="邮箱：fzx2003zhixue@163.com"><img class="someimg" src="./mail.png" alt="" width="30"></abbr>
-    </div>
-    <script>
-        //鼠标点击出现爱心特效  这部分特效是从一个网页搬过来的  觉得挺好看的
-        (function (window, document, undefined) {
-            var hearts = [];
-            window.requestAnimationFrame = (function () {
-                return window.requestAnimationFrame ||
-				window.webkitRequestAnimationFrame ||
-				window.mozRequestAnimationFrame ||
-				window.oRequestAnimationFrame ||
-				window.msRequestAnimationFrame ||
-				function (callback) {
-				    setTimeout(callback, 1000 / 60);
-				}
-            })();
-            init();
-            function init() {
-                css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
-                attachEvent();
-                gameloop();
-            }
-            function gameloop() {
-                for (var i = 0; i < hearts.length; i++) {
-                    if (hearts[i].alpha <= 0) {
-                        document.body.removeChild(hearts[i].el);
-                        hearts.splice(i, 1);
-                        continue;
-                    }
-                    hearts[i].y--;
-                    hearts[i].scale += 0.004;
-                    hearts[i].alpha -= 0.013;
-                    hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
-                }
-                requestAnimationFrame(gameloop);
-            }
-            function attachEvent() {
-                var old = typeof window.onclick === "function" && window.onclick;
-                window.onclick = function (event) {
-                    old && old();
-                    createHeart(event);
-                }
-            }
-            function createHeart(event) {
-                var d = document.createElement("div");
-                d.className = "heart";
-                hearts.push({
-                    el: d,
-                    x: event.clientX - 5,
-                    y: event.clientY - 5,
-                    scale: 1,
-                    alpha: 1,
-                    color: randomColor()
-                });
-                document.body.appendChild(d);
-            }
-            function css(css) {
-                var style = document.createElement("style");
-                style.type = "text/css";
-                try {
-                    style.appendChild(document.createTextNode(css));
-                } catch (ex) {
-                    style.styleSheet.cssText = css;
-                }
-                document.getElementsByTagName('head')[0].appendChild(style);
-            }
-            function randomColor() {
-                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-            }
-        })(window, document);
-    </script>
-</body>
+    }
+
+    .header{
+
+        height:120px;
+
+        background-color:#ddd;    
+
+    }
+
+    .main{
+
+        height:400px;
+
+        background-color:#f00;
+
+        position:relative;
+
+    }
+
+ 
+
+    .main .left{
+
+        width:200px;
+
+        height:400px;
+
+        position:absolute;
+
+        left:0;
+
+        top:0;
+
+        background-color:#0fccaa;
+
+    }
+
+    .main .center{
+
+        height:400px;
+
+        margin:0 305px 0 205px;
+
+        background-color:#123456;
+
+    }
+
+ 
+
+    .main .right{
+
+        width:300px;
+
+        height:400px;
+
+        position:absolute;
+
+        right:0;
+
+        top:0;
+
+        background-color:#ff0;
+
+    }
+
+    .footer{
+
+        height:80px;
+
+        background-color:#ddd;
+
+    }
+
+    </style>
+
+    <body>        
+
+        <p class="box">
+
+            <p class="header"></p>
+
+            <p class="main">
+
+                <p class="left"></p>
+
+                <p class="center"></p>
+
+                <p class="right"></p>        
+
+            </p>
+
+            <p class="footer"></p>
+
+        </p>    
+
+    </body>
+
 </html>
