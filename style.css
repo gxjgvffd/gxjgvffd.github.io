@@ -10,9 +10,10 @@ body {
     background-size: cover;
 }
 .content {
-    perspective: 400px;
+    perspective: 1000px;
     width: 100%;
     height: 620px;
+    margin: auto;
     position: relative;
 }
 /* 顶部导航条 */
@@ -80,6 +81,7 @@ audio {
     padding: 20px;
     margin-top: 20px;
     border-radius: 50px;
+    margin: auto;
     
 }
 #biaoti {
